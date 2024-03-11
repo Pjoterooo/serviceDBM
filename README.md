@@ -21,4 +21,11 @@ virtualenv venv
 
 react 
 nvm install node
+
+
+Start project
+Start python
+python3 connect.ph
+
+Start react
 npm run dev 
