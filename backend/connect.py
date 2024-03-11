@@ -1,15 +1,16 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import oracledb
+from config import DB_USER, DB_PASSWORD, DB_DSN
 
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/samochody', methods=['GET'])
 def get_samochody():
-    user = 'x'
-    password = 'x'
-    dsn = 'x'
+    user = DB_USER
+    password = DB_PASSWORD
+    dsn = DB_DSN
 
     try:
         connection = oracledb.connect(user=user, password=password, dsn=dsn)
