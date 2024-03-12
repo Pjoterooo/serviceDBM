@@ -29,5 +29,4 @@ python3 connect.ph
 
 Start react
 npm run dev 
-
-test
+yarn dev

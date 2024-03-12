@@ -1,33 +1,12 @@
-"use client";
-import React, { useEffect, useState } from "react";
+"use client"
 
-function Home() {
-  const [cars, setCars] = useState([{}]);
+import Link from 'next/link'
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:5000/samochody")
-      .then((res) => res.json())
-      .then((data) => {
-        setCars(data);
-      });
-  }, []);
-
-  return (
-    <main className="">
-      <h1>ReactPythonConnect</h1>
-      <ul>
-        {cars.map((car) => (
-          <li>
-            {Object.entries(car).map(([key, value]) => (
-              <span key={key}>
-                {key.toUpperCase()}: {value},{" "}
-              </span>
-            ))}
-          </li>
-        ))}
-      </ul>
-    </main>
-  );
+export default function Main() {
+    return (
+        <div>
+            <h1>Main site</h1>
+            <Link href="/showCars"><button>ShowCars</button></Link>
+        </div>
+    );
 }
-
-export default Home;
