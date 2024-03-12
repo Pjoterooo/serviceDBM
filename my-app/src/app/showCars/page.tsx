@@ -1,11 +1,14 @@
 "use client";
 import useCars from "../components/connect";
+import "../tailwind.css";
+import NavBar from "../components/navbar"
 
 export default function Main() {
   const { cars, loading } = useCars();
 
   return (
     <main className="">
+      <NavBar></NavBar>
       {loading ? (
         <p>Loading...</p>
       ) : (
